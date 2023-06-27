@@ -4,119 +4,101 @@
 
 /* Home */
 .container {
-    width: 800px;
-    margin: 0 auto;
-    position: absolute;
-    top:50%;
-    left:50%;
-    margin-top: -150px;
-    margin-left: -400px;
+  width: 800px;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-/* Header */
 
+/* Header */
 .items {
-    position: relative;
-    width: 100%;
-    height: 300px;
+  position: relative;
+  width: 100%;
+  height: 500px;
 }
 
 .next {
-    bottom: 0;
+  bottom: 0;
 }
 
-.next i{
-    font-size: 20px;
+.next i {
+  font-size: 20px;
 }
 
-.prev i{
-    font-size: 20px;
+.prev i {
+  font-size: 20px;
 }
 
-.prev, .next {
-    width: 20px;
-    height: 20px;
-    margin: 10px 0;
-    border-radius: 50%;
-    background-color: #ccc;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-    cursor: pointer;
-    z-index: 100;
+.prev,
+.next {
+  width: 20px;
+  height: 20px;
+  margin: 10px 0;
+  border-radius: 50%;
+  background-color: #ccc;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  cursor: pointer;
+  z-index: 100;
 }
 
-
+.item {
+  position: relative;
+}
 
 .item img {
-    width: 100%;
-    height: 300px;
-    object-fit: contain;
-    display: none;
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  display: none;
 }
 
 .active img {
-    display: block;
+  display: block;
 }
 
+.overlay {
+  position: absolute;
+  top: 150px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  transition: opacity 0.3s ease;
+}
 
+.overlay.show {
+  opacity: 1;
+}
 
+.overlay h2 {
+    font-size: 40px;
+}
 
+.overlay p {
+    font-size: 14px;
+}
 
+.overlay h2,
+.overlay p {
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  background-color: rgba(22, 22, 24, 0.342);
+  border-radius: 50px;
+}
 
-
-
-
-
-
-
-
-
-/* Debug */
-
-
-
-
-
-
-
-
-
-/* MEDIAQUERY FOR RESPONIVE */
-
-/* Desktop-First */
-
-/* DESKTOP */
-/* @media screen and (max-width: 992px) {
-    
-} */
-
-/* TABLET */
-/* @media screen and (max-width: 768px) {
-    
-} */
-
-/* MOBILE PICCOLO */
-/* @media screen and (max-width: 576px) {
-
-} */
-
-
-
-/* Mobile-First */
-
-/* MOBILE PICCOLO */
-/* @media screen and (min-width: 576px) {
-
-} */
-
-/* TABLET */
-/* @media screen and (min-width: 768px) {
-    
-} */
-
-/* DESKTOP */
-/* @media screen and (min-width: 992px) {
-    
-} */
-
+@media screen and (max-width: 576px) {
+  .container {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
 
